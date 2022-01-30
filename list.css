@@ -1,0 +1,12 @@
+#load {
+    width: 500px;
+    height:500px;
+    border:1px solid black;
+    background-color:aqua;
+    color:white;
+    margin: auto;
+    overflow:scroll;
+}
+body {
+    background-color:black;
+}

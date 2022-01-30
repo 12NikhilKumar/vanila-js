@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div id="load">
+        <h3>masai 1</h3>
+        <h3>masai 2</h3>
+        <h3>masai 3</h3>
+        <h3>masai 4</h3>
+        <h3>masai 5</h3>
+        <h3>masai 6</h3>
+        <h3>masai 7</h3>
+        <h3>masai 9</h3>
+        <h3>masai 10</h3>
+        <h3>masai 11</h3>
+        <h3>masai 12</h3>
+        <h3>masai 13</h3>
+        <h3>masai 14</h3>
+        <h3>masai 15</h3>
+        <h3>masai 16</h3>
+        <h3>masai 17</h3>
+        <h3>masai 18</h3>
+        <h3>masai 19</h3>
+        <h3>masai 20</h3>
+        <h3>masai 21</h3>
+        <h3>masai 22</h3>
+        <h3>masai 23</h3>
+        <h3>masai 24</h3>
+        <h3>masai 25</h3>
+    </div>
+</body>
+<script>
+    const card = document.getElementById("load");
+    var i = 26;
+    function fn(){
+        if(card.scrollHeight - Math.ceil(card.scrollTop)===card.clientHeight){
+            let rect = card.getBoundingClientRect();
+            console.log("hii")
+            for(var j=i;j<(i*2)-1;j++){
+                let p = document.createElement("h3");
+                p.innerText = `masai ${j}`;
+                card.append(p);
+                console.log(p)
+            }
+            i = i+25;
+        }
+    }
+    card.addEventListener("scroll",fn)
+</script>
+</html>
